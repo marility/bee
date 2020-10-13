@@ -11,6 +11,7 @@ systemctl enable --now docker
 
 mkdir -p ~/{geth,nucypher}
 
-cat <<< EOF >> ~/.bashrc
+cat >> ~/.bashrc << EOF
 alias geth-console='docker-compose exec geth geth attach /root/.ethereum/geth.ipc'
 EOF
+source ~/.bashrc

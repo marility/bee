@@ -6,8 +6,7 @@ services:
     image: ethereum/client-go:alltools-stable
     container_name: geth
     restart: always
-    command: ["--syncmode", "light", "--rpc", "--allow-insecure-unlock"]
-    # command: ["--syncmode", "light", "--rpc", "--allow-insecure-unlock", "--rinkeby"]
+    command: ["geth", "--syncmode", "light", "--rpc", "--allow-insecure-unlock"]
     volumes:
         - /root/geth/data:/root/.ethereum
 
