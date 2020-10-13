@@ -18,7 +18,8 @@ $ docker-compose up -d geth
 ## create or import geth account for worker node
 
 ```
-personal.importRawKey(PRIVATE_KEY, PASSWORD)
+$ geth-console
+> personal.importRawKey(PRIVATE_KEY, PASSWORD)
 ```
 
 ## init nucypher
