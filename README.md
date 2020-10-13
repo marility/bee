@@ -36,3 +36,8 @@ $ nucypher-init
 $ docker-compose up -d nucypher
 ```
 
+## watch woker logs
+
+```
+$ docker-compose logs -f nucypher
+```
