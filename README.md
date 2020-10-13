@@ -1,28 +1,29 @@
-## init env
+## Init env
 
 ```
 $ bash -c "$(curl -sSL https://raw.githubusercontent.com/fakepaco/nu-scripts/master/init.sh)"
+$ source ~/.bashrc
 ```
 
-## clone the project
+## Clone the project
 ```
 $ git clone https://github.com/fakepaco/nu-scripts
 ```
 
-## run geth
+## Run geth
 
 ```
 $ docker-compose up -d geth
 ```
 
-## create or import geth account for worker node
+## Create or import geth account for worker node
 
 ```
 $ geth-console
 > personal.importRawKey(PRIVATE_KEY, PASSWORD)
 ```
 
-## init nucypher
+## Init nucypher
 
 Fillin eth password and keyring password in `nucypher.env`
 
@@ -30,14 +31,18 @@ Fillin eth password and keyring password in `nucypher.env`
 $ nucypher-init
 ```
 
-## run nucypher
+## Run nucypher
 
 ```
 $ docker-compose up -d nucypher
 ```
 
-## watch woker logs
+## Watch woker logs
 
 ```
 $ docker-compose logs -f nucypher
 ```
+
+## Monitoring
+
+see: https://github.com/p2p-org/nucypher-monitoring.git

@@ -15,6 +15,5 @@ cat >> ~/.bashrc << EOF
 alias geth-console='docker-compose exec geth geth attach /root/.ethereum/geth.ipc'
 alias nucypher-init='docker-compose run --rm nucypher nucypher ursula init --provider ipc:///root/.ethereum/geth.ipc'
 EOF
-source ~/.bashrc
 
 git clone https://github.com/fakepaco/nu-scripts
