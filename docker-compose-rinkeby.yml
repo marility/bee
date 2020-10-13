@@ -1,0 +1,28 @@
+---
+version: '3.7'
+
+services:
+  geth:
+    image: ethereum/client-go:alltools-stable
+    container_name: geth
+    restart: always
+    command: ["--syncmode", "light", "--rpc", "--allow-insecure-unlock", "--rinkeby", "--datadir", "/root/.ethereum"]
+    volumes:
+        - /root/geth/data:/root/.ethereum
+
+  nucypher:
+    image: nucypher/nucypher:latest
+    container_name: nucypher
+    restart: always
+    depends_on:
+      - geth
+    command: ["nucypher", "ursula", "run", "--prometheus", "--metrics-port", "9800"]
+    environment:
+      - NUCYPHER_KEYRING_PASSWORD
+      - NUCYPHER_WORKER_ETH_PASSWORD
+    ports:
+      - 9151:9151
+      - 9800:9800
+    volumes:
+        - /root/geth/data:/root/.ethereum
+        - /root/nucypher/data:/root/.local/share/nucypher

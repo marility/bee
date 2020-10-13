@@ -19,8 +19,8 @@ services:
       - geth
     command: ["nucypher", "ursula", "run", "--prometheus", "--metrics-port", "9800"]
     environment:
-      - NUCYPHER_KEYRING_PASSWORD=
-      - NUCYPHER_WORKER_ETH_PASSWORD=
+      - NUCYPHER_KEYRING_PASSWORD
+      - NUCYPHER_WORKER_ETH_PASSWORD
     ports:
       - 9151:9151
       - 9800:9800

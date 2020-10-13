@@ -10,3 +10,7 @@ chmod +x /usr/local/bin/docker-compose
 systemctl enable --now docker
 
 mkdir -p ~/{geth,nucypher}
+
+cat <<< EOF >> ~/.bashrc
+alias geth-console='docker-compose exec geth geth attach /root/.ethereum/geth.ipc'
+EOF
