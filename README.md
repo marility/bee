@@ -1,10 +1,13 @@
 ## init env
 
 ```
-$ bash -c "$(https://raw.githubusercontent.com/fakepaco/nu-scripts/master/init.sh)"
+$ bash -c "$(curl -sSL https://raw.githubusercontent.com/fakepaco/nu-scripts/master/init.sh)"
 ```
 
 ## clone the project
+```
+$ git clone https://github.com/fakepaco/nu-scripts
+```
 
 ## run geth
 
