@@ -24,9 +24,9 @@ $ geth-console
 
 ## init nucypher
 
+Edit key.env to fillin your password and keyring pass
+
 ```
-$ export NUCYPHER_KEYRING_PASSWORD=
-$ export NUCYPHER_WORKER_ETH_PASSWORD=
 $ docker-compose run nucypher nucypher ursula init --provider ipc:///root/.ethereum/geth.ipc --network mainnet
 ```
 
