@@ -8,7 +8,7 @@ services:
     restart: always
     command: ["geth", "--syncmode", "light", "--rpc", "--allow-insecure-unlock"]
     volumes:
-        - /root/geth/data:/root/.ethereum
+        - /root/geth:/root/.ethereum
 
   nucypher:
     image: nucypher/nucypher:latest
@@ -24,5 +24,5 @@ services:
       - 9151:9151
       - 9800:9800
     volumes:
-        - /root/geth/data:/root/.ethereum
-        - /root/nucypher/data:/root/.local/share/nucypher
+        - /root/geth:/root/.ethereum
+        - /root/nucypher:/root/.local/share/nucypher
