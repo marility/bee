@@ -17,11 +17,10 @@ services:
     depends_on:
       - geth
     command: ["nucypher", "ursula", "run", "--prometheus", "--metrics-port", "9800"]
-    env_file:
-      - key.env
+    env_file: nucypher.env
     ports:
       - 9151:9151
-      - 9800:9800
+      - 9101:9101
     volumes:
         - /root/geth:/root/.ethereum
         - /root/nucypher:/root/.local/share/nucypher

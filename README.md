@@ -24,7 +24,7 @@ $ geth-console
 
 ## init nucypher
 
-Edit key.env to fillin your password and keyring pass
+Fillin eth password and keyring password in `nucypher.env`
 
 ```
 $ nucypher-init
