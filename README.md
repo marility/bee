@@ -27,7 +27,7 @@ $ geth-console
 ```
 $ export NUCYPHER_KEYRING_PASSWORD=
 $ export NUCYPHER_WORKER_ETH_PASSWORD=
-$ docker-compose run -e NUCYPHER_KEYRING_PASSWORD -e NUCYPHER_WORKER_ETH_PASSWORD nucypher nucypher ursula init --provider ipc:///root/.ethereum/geth.ipc --network main
+$ docker-compose run nucypher nucypher ursula init --provider ipc:///root/.ethereum/geth.ipc --network mainnet
 ```
 
 ## run nucypher
