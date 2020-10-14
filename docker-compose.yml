@@ -16,7 +16,7 @@ services:
     restart: always
     depends_on:
       - geth
-    command: ["nucypher", "ursula", "run", "--prometheus", "--metrics-port", "9800"]
+    command: ["nucypher", "ursula", "run", "--prometheus", "--metrics-port", "9101"]
     env_file: nucypher.env
     ports:
       - 9151:9151
