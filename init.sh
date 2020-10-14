@@ -16,4 +16,4 @@ alias geth-console='docker-compose exec geth geth attach /root/.ethereum/geth.ip
 alias nucypher-init='docker-compose run --rm nucypher nucypher ursula init --provider ipc:///root/.ethereum/geth.ipc'
 EOF
 
-git clone https://github.com/fakepaco/nu-scripts
+git clone https://github.com/paco0x/nu-scripts
