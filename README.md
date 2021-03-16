@@ -1,17 +1,12 @@
-# System preparation
+# Environment
 
-Only for new hosts of centos
+centos 8
 
-## Install docker and docker-compose
+## initialize, include the initialize of host and the installation of docker-compose
 
 ```bash
 $ bash -c "$(curl -sSL https://raw.githubusercontent.com/marility/bee-scripts/master/init.sh)"
 $ source ~/.bashrc
-```
-
-## Clone the project
-```bash
-$ git clone https://github.com/marility/bee-scripts
 ```
 
 ## put your password in .env

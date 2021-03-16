@@ -15,4 +15,4 @@ chmod +x /usr/local/bin/docker-compose
 
 systemctl enable --now docker
 
-git clone https://github.com/paco0x/nu-scripts
+git clone https://github.com/marility/bee-scripts
