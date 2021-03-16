@@ -1,64 +1,34 @@
 # System preparation
 
+Only for new hosts of centos
+
 ## Install docker and docker-compose
 
-```
-$ bash -c "$(curl -sSL https://raw.githubusercontent.com/paco0x/nu-scripts/master/init.sh)"
+```bash
+$ bash -c "$(curl -sSL https://raw.githubusercontent.com/marility/bee-scripts/master/init.sh)"
 $ source ~/.bashrc
 ```
 
 ## Clone the project
-```
-$ git clone https://github.com/paco0x/nu-scripts
-```
-
-# Run geth light node
-
-**If you choose to use infura, skip this step**
-
-## Run geth
-
-```
-$ docker-compose up -d geth
+```bash
+$ git clone https://github.com/marility/bee-scripts
 ```
 
-## Create or import geth account for worker node
+## put your password in .env
 
-```
-$ geth-console
-> personal.importRawKey(PRIVATE_KEY, PASSWORD)
-```
-
-# Run nucypher worker
-
-## Init nucypher
-
-Fillin eth password and keyring password in `nucypher.env`
-
-For using geth light node on localhost:
-
-```
-$ nucypher-init
+```bash
+cd bee-scripts
+sed 's/BEE_PASSWORD=.*$/BEE_PASSWORD=XXXXXXXXX/' .env
 ```
 
-For using infura API:
+## run the bee
 
-```
-$ docker-compose run --rm nucypher nucypher ursula init --provider https://INFURA_URL --signer keystore:///root/.local/share/nucypher/KEYSTORE_FILE --network mainnet
-```
-
-## Run nucypher
-
-```
-$ docker-compose up -d nucypher
+```bash
+docker-compose up -d
 ```
 
-## Watch woker logs
+## Watch logs
 
+```bash
+docker-compose logs -f --tail=10 bee_bee_1
 ```
-$ docker-compose logs -f nucypher
-```
-
-# Monitoring
-
-see: https://github.com/p2p-org/nucypher-monitoring.git
