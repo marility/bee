@@ -25,5 +25,10 @@ docker-compose up -d
 ## Watch logs
 
 ```bash
-docker-compose logs -f --tail=10 bee_bee_1
+docker logs -f --tail=100 bee-scripts_bee_1
 ```
+
+## get the bzz from the faucet
+
+
+## set the crontab of clashout.sh
